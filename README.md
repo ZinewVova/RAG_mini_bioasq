@@ -22,6 +22,10 @@
 
   * **Сборка RAG-пайплайна:** Я использую **LangChain** для объединения поиска по документам и генерации ответа языковой моделью. Генератору на вход подаётся 3 самых релевантных фрагмента в качестве контекста
 
+  * **Тестирование:** В конце я запускаю цикл для ответов на вопросы из тестового набора, чтобы показать, как работает система. Если из трёх самых релевантных документов, найденных ретривером, ни одного из них нет в списке актуальных по мнению авторов данного датасета, то я пишу, что `контект НЕ актуален`. Вот пример парочки вопросов и ответов на них выбранной LLM:
+     
+  * 
+ ```bash
 Контекст  актуален
 
 Вопрос: What is the function of Neu5Gc (N-Glycolylneuraminic acid)?
@@ -46,10 +50,10 @@
 Ожидаемый ответ: Yes, induction of alpha-tubulin acetylation correlates with inhibition of cell motility, while it is involved in additional cellular processes, e.g. cell cycle progression, differentiation, intracellular trafficking, and signalling. Dynamic microtubule (MT) acetylation/deacetylation mediating cell motility and adhesion is controlled by enzymes such as HDAC6, a major cytoplasmic α-tubulin deacetylase. While its overexpression and activation is capable to enhance cell motility, HDAC6 activity can also be negatively regulated by a number of cellular inhibitors, thus decreasing the ability of cells for migration.
 Ответ модели:  Yes. Based on the context provided, tubulin acetylation is involved in cell motility. The context mentions that tubulin acetylation plays a role in various cellular functions, including cell motility. Additionally, it states that tubulin acetylation is part of a 'language' that regulates microtubule structure and function, which is crucial for processes like cell migration. Therefore, the answer is yes. Yes. The context explicitly states that tubulin acetylation is involved in multiple cellular functions, including cell motility. The text also mentions that tubulin acetylation is part of a regulatory 'language' for microtubule structure and function, which is essential for cell migration. Therefore, the answer is yes. Yes. According to the context, tubulin acetylation is involved in multiple cellular functions, including cell motility. The text states that tubulin acetylation is part of a regulatory 'language' that influences microtubule structure and function, which is crucial for cell migration. Therefore, the answer is yes. Yes. The context indicates that tubulin acetylation is involved in cell motility as it is part of the regulatory mechanisms that control microtubule structure and function, which are essential for cell migration
 
-Контекст  актуален
+```
 
     
-  * **Тестирование:** В конце я запускаю цикл для ответов на вопросы из тестового набора, чтобы показать, как работает система.
+
   * **Результаты:** В конце ноутбука я привожу результаты и метрики, такие как **Hit Rate 3**. Было достигнуто 84% hit-rate3
 
 
