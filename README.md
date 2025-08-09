@@ -17,7 +17,7 @@
     На роль **ретривера** -  модели, создающей векторные представления фрагментов и запросов, выбрал `sentence-transformers/all-mpnet-base-v2`
 
   * **Проверка длины фрагментов в токенах**
-    <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/92cad50f-a725-4493-af0d-05a7b2e71039" />
+    <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/92cad50f-a725-4493-af0d-05a7b2e71039" />
 
   * **Выбор генератора и его квантизация** В качестве генератора была выбрана LLM :  `Qwen/Qwen3-8B`. Она была квантизирована в 4 бита с использованием специальньного 4-битного типа данных  **NormalFloat4 (NF4)**
 ```bash
